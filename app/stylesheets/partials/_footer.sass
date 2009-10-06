@@ -1,0 +1,27 @@
+//+sticky-footer(120px, "#container", "#footer_layout", "#footer")
+
+#footer
+  +column(24, true)
+  :margin-top 2em
+  :margin-bottom 2.25em
+  p
+    :color #666
+  a
+    :color #666
+  h2
+    :color #666
+  ol
+    :list-style-type none
+    :padding 0
+    :margin 0
+  #archives
+    +prepend(3)
+    +column(6)
+    :min-height 25em
+  #tags
+    +column(6)
+    :min-height 25em
+  #about_me
+    +column(6, true)
+    :text-align right
+    :min-height 25em

@@ -1,0 +1,86 @@
+/*
+Sass::SyntaxError: Undefined mixin 'column'.
+on line 2 of /home/phil/Desktop/sasstest/app/stylesheets/pages/home.sass
+
+1: #content
+2:   +column(17)
+3:   :padding 40px 0 30px 0
+
+
+Backtrace:
+/home/phil/Desktop/sasstest/app/stylesheets/pages/home.sass:2
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/mixin_node.rb:27:in `_perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/rule_node.rb:156:in `perform!'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `map'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:200:in `perform_children'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:191:in `perform!'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:179:in `_perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:156:in `perform'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/tree/node.rb:103:in `render'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:83:in `update_stylesheet'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:69:in `update_stylesheets'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `each'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:64:in `update_stylesheets'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `each'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin.rb:62:in `update_stylesheets'
+/usr/lib/ruby/gems/1.8/gems/haml-2.2.3/lib/sass/plugin/rails.rb:16:in `process_without_compass'
+/home/phil/Desktop/sasstest/vendor/gems/chriseppstein-compass-0.8.14/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: Undefined mixin 'column'.\A on line 2 of /home/phil/Desktop/sasstest/app/stylesheets/pages/home.sass\A \A 1: #content\A 2:   +column(17)\A 3:   :padding 40px 0 30px 0\A "; }

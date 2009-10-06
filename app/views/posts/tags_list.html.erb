@@ -1,0 +1,9 @@
+<h2>Posts tagged with: <strong><%= params[:id] %></strong></h2>
+<% @posts.each do |post| %>
+  <h3><%= link_to post.title, post %></h3>
+  <p><%= "Posted by #{post.author} on #{post.created_at} in #{post.tag_list}" %> | <strong><%= link_to "Comments", post_path(post, :anchor => "comments") %></strong></p>
+  <hr />
+<% end %>
+
+
+

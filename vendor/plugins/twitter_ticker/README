@@ -1,0 +1,29 @@
+TwitterTicker
+=============
+Embed a Twitter Feed into your application.
+
+A generator is available for copying relevant images, a javascript file and a css file to the public directory.
+
+	./script/generate twitter_ticker 
+
+** IMPORTANT **
+Include 'twitter_ticker.js' in your layout. 
+Requires prototype and scriptaculous.
+Not set to run on IE6 (too late to debug -perhaps tomorrow). Checked on IE7 and FF 3.0.7
+
+Example
+=======
+
+Insert into your views (where feed is wanted):
+
+	<%= display_twitter_ticker(:query => 'whales') %>
+	
+Options include: 
+	:query - Find tweets containing this word
+	:speed - (crawl, walk, run or sprint ). Default is 'walk'. How quickly tweets are replaced.
+	:from_user - fetch tweets from a specific user. This option overrides :query.
+	:auto (true|false) - reveal panel automatically when page loads. Default is false
+
+
+
+Copyright (c) 2009 Omar Sahyoun, http://eduvoyage.com), released under the MIT license

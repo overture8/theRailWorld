@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= h(yield(:title) || "Untitled") %></title>
+  <%= stylesheet_link_tag 'compiled/application', 'tag_cloud', 'twitter_ticker', 'pagination' %>
+  <!--[if IE]><link rel="stylesheet" href="compiled/ie" type="text/css" media="screen, projection" /><![endif]-->
+  <%= javascript_include_tag 'prototype', 'effects', 'twitter_ticker' %>
+  <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
+  <%= yield(:head) %> 
+  <script type="text/javascript">
+    var disqus_developer = 1;
+  </script> 
+</head>
+<body>
+  <div id="container">
+    <a href="http://github.com/overture8"><img style="position: absolute; top: 0; margin: 0; padding: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
+    <div id="header">
+      <% if flash[:notice] %>
+        <div class='notice'><%= flash[:notice] %></div>
+      <% end %>
+      <%= link_to '<h1>the<span>Rail</span>World</h1>', root_path %>
+    </div>
+    <div id="yield">
+      <% unless is_home? %>
+        <p class="back_home">&larr; <%= link_to "Back Home", root_path %></p>
+      <% end %>
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <div id="archives">
+        <%= render :partial => 'shared/archive_list' %>
+      </div>
+      <div id="tags">
+        <%= render :partial => 'shared/tag_list' %>
+      </div>
+      <div id="about_me">
+        <%= render :partial => 'shared/about' %>
+      </div>
+    </div>
+    <div id="small_print">
+      <span id="copyright">
+        &copy; 2009 Phil McClure
+      </span>
+      <span id="site_details">
+        This site was developed using <%= link_to 'Compass', "http://compass-style.org/", :target => '_blank' %>, <%= link_to 'Blueprint', 'http://www.blueprintcss.org/', :target => '_blank' %> and <%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', :target => '_blank' %> - Much thanks to these guys!       
+      </span>
+    </div>
+  </div>
+  <%= render :partial => 'comments/disqus' %>
+</body>
+<%= display_twitter_ticker(:from_user => 'overture8') %>
+</html>

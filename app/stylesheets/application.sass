@@ -1,0 +1,66 @@
+@import blueprint/reset.sass
+@import blueprint
+@import compass/layout.sass
+@import blueprint/modules/grid.sass
+@import blueprint/modules/form.sass
+@import partials/base.sass
+@import print.sass
+
++blueprint
++blueprint-form
+
+#container
+  +container
+  :border 2px solid #666
+  :background-color #fff
+  :margin-top 3em
+  :margin-bottom 3em
+  :padding-bottom 4em
+  a
+    :font-size 1em
+    :font-weight normal 
+    :color = !red_color
+    &:hover
+      :background-color #444
+      :color #fff
+  li
+    span
+      :color = !red_color
+      :font-size .9em
+  h2
+    a
+      :font-weight bold
+      :font-family 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+      :font-size 1.5em
+      :text-decoration none
+      :color #fff
+      :background-color #444
+      &:hover
+        :background-color = !red_color
+        :color #fff
+
+#yield
+  +prepend(3)
+  +span(12)
+  +append(3)
+
+body
+  :background-image url(/images/header.png)
+  :background-repeat repeat-x 
+  background-color = !darker_color
+
+hr
+  :border none 0
+  :border-top = 1px "dashed" !inter_color 
+  :width 100%
+  :height 1px
+
+.author
+  em
+    :color gray
+    :font-family "serif"
+ 
+@import partials/header.sass
+@import partials/footer.sass
+@import partials/pagination.sass
+@import partials/small_print.sass

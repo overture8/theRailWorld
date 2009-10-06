@@ -1,0 +1,7 @@
+<%= image_tag "icons/folder.png" %>
+<h2 class="footer_title">ARCHIVES</h2>
+<ol>
+<% for post in @archives %>
+  <li><%= link_to post.monthname_created_at + " - " + post.created_at.year.to_s, '/archives/' + post.created_at.year.to_s + '/' + post.monthname_created_at.downcase %><span><%= " ( " + Post.count_of_archives(post.created_at.month, post.created_at.year).to_s + " )" %><span></li>
+<% end %>
+</ol>

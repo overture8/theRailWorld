@@ -1,0 +1,6 @@
+<%= image_tag "icons/tag.png" %>
+<h2 class="footer_title">TAGS</h2>
+<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+  <%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
+<% end %>
+        

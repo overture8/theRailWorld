@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post %></h2>
+  <div class="author"><em>by <%=h post.author %></em></div>
+  <%= BlueCloth.new(post.body).to_html %><br /><br />
+  <%= "Posted on #{post.created_at.strftime("%a %b %Y")}" %> | <%= link_to "Comments", post_path(post, :anchor => "comments"), :class => 'comment_link' %>
+  <hr />
+<% end %>
+<%= will_paginate @posts %>
+

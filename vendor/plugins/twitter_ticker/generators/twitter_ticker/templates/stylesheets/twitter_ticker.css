@@ -1,0 +1,119 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+div#TwitterTickerWrapper {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+div#TwitterTicker br.clear {
+	clear: both;
+}
+
+div#TwitterTicker * {
+	margin: 0;
+	padding: 0;
+}
+
+div#TwitterTicker a {
+	color: #69ACC7;
+}
+
+div#TwitterTicker a:hover {
+	color: white;
+}
+
+div#TwitterTicker {
+	background: #424242 url(../images/twitter_ticker/twitterTabBg.png) repeat-x bottom left;
+	padding: 0px;
+	padding-left: 20px;
+	clear: both;
+	height: 13px;
+}
+
+div#TwitterTicker dl {
+	width: 90%;
+	color: white;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+div#TwitterTicker h3 {
+	padding: 10px;
+	color: white;
+	font-size: 15px;
+}
+
+div#TwitterTicker dl dt {
+	width: 60px;
+	float: left;
+}
+
+div#TwitterTicker dl dt strong {
+	font-weight: normal;
+}
+
+div#TwitterTicker dl dt img {
+	width: 40px;
+	border: 1px solid white;
+	padding: 2px;
+}
+
+
+a#TwitterTickerToggle {
+	background: url(../images/twitter_ticker/twitterTickerTab.png) no-repeat top left;
+	width: 80px;
+	height: 22px;
+	float: right;	
+	text-indent: -10000px;
+}
+
+span#TT {
+	position: absolute;
+	color: white;
+	right: 10px;
+	bottom: 10px;
+	font-size: 9px;
+	text-align: right;
+}
+
+span#TT a {
+	color: #666;
+}
+
+span#TT a:hover {
+	color: #ccc;
+}
+
+/* self-clear floats */
+
+div#TwitterTicker dl dt img {
+	height: 40px;
+}
+
+div#TwitterTicker dl dt {
+	zoom: 1;
+}
+
+div#TwitterTicker dl dt:after {
+		content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+   }
+
+/*IE6*/
+
+* html div#TwitterTickerWrapper {
+	position: absolute;
+}
+
+* html div#TwitterTicker {
+	background: #424242;
+}

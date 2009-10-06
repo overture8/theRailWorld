@@ -1,0 +1,35 @@
+<% PASSWORD_FILE = File.join(RAILS_ROOT, '..', '..', 'shared', 'config', 'dbpassword') %>
+
+development:
+  adapter: mysql
+  database: ig_dev
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
+  
+test: &TEST
+  adapter: mysql
+  database: ig_test
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
+  
+staging:
+  adapter: mysql
+  database: ig__staging
+  username: CHANGEME
+  password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
+  host: localhost
+  encoding: utf8
+  socket: /var/lib/mysql/mysql.sock
+  
+production:
+  adapter: mysql
+  database: idea_generation_production
+  username: CHANGEME
+  password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
+  host: localhost
+  encoding: utf8
+  socket: /var/lib/mysql/mysql.sock
