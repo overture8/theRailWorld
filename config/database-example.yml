@@ -2,7 +2,7 @@
 
 development:
   adapter: mysql
-  database: ig_dev
+  database: trw_dev
   username: root
   password: 
   host: localhost
@@ -10,7 +10,7 @@ development:
   
 test: &TEST
   adapter: mysql
-  database: ig_test
+  database: trw_test
   username: root
   password: 
   host: localhost
@@ -18,7 +18,7 @@ test: &TEST
   
 staging:
   adapter: mysql
-  database: ig__staging
+  database: trw_staging
   username: CHANGEME
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
@@ -27,7 +27,7 @@ staging:
   
 production:
   adapter: mysql
-  database: idea_generation_production
+  database: trw_production
   username: CHANGEME
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
