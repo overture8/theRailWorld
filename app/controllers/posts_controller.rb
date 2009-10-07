@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :require_auth, :only => [:new, :edit]
+  #before_filter :require_auth, :only => [:new, :edit]
   
   # GET /posts
   # GET /posts.xml

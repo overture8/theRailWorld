@@ -1,3 +1,5 @@
+<% content_for :title, 'theRailWorld.com by Phil McClure - Ruby on Rails blog in Belfast' %>
+
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
   <div class="author"><em>by <%=h post.author %></em></div>

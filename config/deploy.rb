@@ -1,5 +1,6 @@
 set :application, "www.therailworld.com"
 set :repository,  "git@github.com:overture8/theRailWorld.git"
+set :deploy_to, "/var/www/#{application}" 
 
 set :scm, :git
 
@@ -20,6 +21,7 @@ end
 namespace :db do
   desc "Create database password in shared path"
   task :password do
+    run "cp #{File.join(current_path,'config','database-example.yml')} #{File.join(current_path,'config','database.yml')}"
     set :db_password, Proc.new { Capistrano::CLI.password_prompt("Remote database password: ") }
     run "mkdir -p #{shared_path}/config"
     put db_password, "#{shared_path}/config/dbpassword"
