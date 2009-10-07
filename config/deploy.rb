@@ -11,8 +11,8 @@ role :db,  "www.therailworld.com", :primary => true        # This is where Rails
 before "deploy:setup", "db:password"
 
 namespace :deploy do
-  task :start {}
-  task :stop {}
+#  task :start {}
+#  task :stop {}
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
