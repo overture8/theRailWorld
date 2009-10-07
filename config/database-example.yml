@@ -19,7 +19,7 @@ test: &TEST
 staging:
   adapter: mysql
   database: trw_staging
-  username: CHANGEME
+  username: root
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
   encoding: utf8
@@ -28,7 +28,7 @@ staging:
 production:
   adapter: mysql
   database: trw_production
-  username: CHANGEME
+  username: root
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
   encoding: utf8
