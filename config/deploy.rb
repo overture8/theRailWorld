@@ -4,9 +4,9 @@ set :deploy_to, "/var/www/#{application}"
 
 set :scm, :git
 
-role :web, "www.therailworld.com"                          # Your HTTP server, Apache/etc
-role :app, "www.therailworld.com"                          # This may be the same as your `Web` server
-role :db,  "www.therailworld.com", :primary => true        # This is where Rails migrations will run
+role :web, "174.143.168.192"                          # Your HTTP server, Apache/etc
+role :app, "174.143.168.192"                          # This may be the same as your `Web` server
+role :db,  "174.143.168.192", :primary => true        # This is where Rails migrations will run
 
 before "deploy:setup", "db:password"
 
