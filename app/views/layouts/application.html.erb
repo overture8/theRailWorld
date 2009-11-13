@@ -8,9 +8,6 @@
   <%= javascript_include_tag 'prototype', 'effects', 'twitter_ticker' %>
   <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
   <%= yield(:head) %> 
-  <script type="text/javascript">
-    var disqus_developer = 1;
-  </script> 
 </head>
 <body>
   <div id="container">
