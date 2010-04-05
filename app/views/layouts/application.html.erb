@@ -24,6 +24,9 @@
       <% end %>
       <%= yield %>
     </div>
+    <div id="sidebar">
+      <%= yield(:sidebar) %>
+    </div>
     <div id="footer">
       <div id="archives">
         <%= render :partial => 'shared/archive_list' %>

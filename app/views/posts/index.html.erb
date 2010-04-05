@@ -9,3 +9,7 @@
 <% end %>
 <%= will_paginate @posts %>
 
+<% content_for :sidebar do %>
+  <%= link_to(image_tag('banner1.png'), 'http://meetee.me' ) %>
+<% end %>
+
