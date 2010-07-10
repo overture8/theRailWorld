@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   has_many :comments
   
   def self.search(page = 1)
-    paginate :per_page => 3, :page => page, :order => "created_at DESC"
+    paginate :per_page => 5, :page => page, :order => "created_at DESC"
   end
   
   def to_param
