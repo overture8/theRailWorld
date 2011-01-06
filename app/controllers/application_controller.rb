@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   # Common items which appear on the footer of every page
   def footer
-    @archives = Post.all(:group => "month(created_at)", :select => "created_at, title")
+    @archives = Post.all(:group => "month(created_at), year(created_at)", :select => "created_at, title", :order => "created_at")
     @tags = Post.tag_counts
     @recent_posts = Post.all(:limit => 10, :order => "created_at DESC")
   end
