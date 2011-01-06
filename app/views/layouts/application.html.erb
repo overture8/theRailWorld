@@ -16,7 +16,7 @@
       <% if flash[:notice] %>
         <div class='notice'><%= flash[:notice] %></div>
       <% end %>
-      <%= link_to '<h1>the<span>Rail</span>World</h1>', root_path %>
+      <%= link_to '<h1>the<span>Rail</span>World</h1>', root_path, :style => "text-decoration: none;" %>
     </div>
     <div id="yield">
       <% unless is_home? %>
